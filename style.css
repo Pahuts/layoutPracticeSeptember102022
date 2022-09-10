@@ -1,0 +1,380 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* End of reset */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: hsl(224, 48%, 16%);
+  padding: 20px 80px;
+  color: #fff;
+}
+
+header > .logo > a {
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #e94560;
+  transition: color 0.3s ease-in-out;
+}
+header > .logo > a:hover {
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+header > nav > ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header > nav > ul > li > a {
+  margin-right: 15px;
+  font-weight: 600;
+  color: #fff;
+  height: auto;
+  transition: color 0.3s ease-in-out;
+}
+
+header > nav > ul > li > a:hover {
+  color: #e94560;
+
+  transform: scale(1.6);
+}
+
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.home > .left-part,
+.home > .right-part {
+  padding: 20px 80px;
+  width: 50%;
+}
+
+.home > .right-part {
+  background-color: #e94560;
+}
+.home > .left-part {
+  background-color: #0f3460;
+}
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.home h1 {
+  margin-bottom: 20px;
+}
+
+.home h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+p {
+  color: hsl(200, 53%, 76%);
+  line-height: 1.6;
+}
+
+.home p {
+  padding: 20px;
+}
+
+.about {
+  padding: 20px 80px;
+}
+
+.portfolio {
+  padding: 20px 80px;
+}
+
+button {
+  font-family: inherit;
+  background-color: transparent;
+  font-weight: 600;
+}
+
+.btn {
+  border-color: #fff;
+  color: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #000;
+  transform: scale(0.98);
+}
+
+.cards {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.card {
+  font-size: 3rem;
+  padding: 80px;
+  width: 15%;
+  height: 100px;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 50px -7px hsl(200, 53%, 76%);
+}
+
+.card:nth-child(even) {
+  background-color: hsl(213, 73%, 62%);
+  transform: scale(1.6);
+  transition: transform 1s ease-in-out;
+}
+.card:nth-child(odd) {
+  background-color: hsl(213, 73%, 22%);
+}
+
+.card:hover:nth-child(even) {
+  transform: scale(1);
+  transform: rotate(90deg);
+}
+
+.card > p {
+  transition: transform 1s ease-in-out;
+}
+.card:hover:nth-child(even) > p {
+  transform: scale(1);
+  transform: rotate(270deg);
+}
+
+.grid-part {
+  display: grid;
+  gap: 1.5rem;
+  grid-auto-columns: 1fr;
+  grid-template-areas:
+    "one"
+    "two"
+    "three"
+    "four"
+    "five";
+  padding-block: 2rem;
+  width: min(95%, 70rem);
+  margin-inline: auto;
+}
+
+.grid-card {
+  padding: 50px;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.grid-card:nth-child(1) {
+  grid-area: one;
+}
+.grid-card:nth-child(2) {
+  grid-area: two;
+}
+.grid-card:nth-child(3) {
+  grid-area: three;
+}
+.grid-card:nth-child(4) {
+  grid-area: four;
+}
+.grid-card:nth-child(5) {
+  grid-area: five;
+}
+
+.grid-card:nth-child(odd) {
+  background-color: hsl(213, 73%, 62%);
+}
+.grid-card:nth-child(even) {
+  background-color: hsl(213, 73%, 22%);
+}
+
+@media screen and (min-width: 33em) {
+  .grid-part {
+    grid-template-areas:
+      "one one"
+      "two three"
+      "five five"
+      "four four";
+  }
+}
+
+@media screen and (min-width: 38em) {
+  .grid-part {
+    grid-template-areas:
+      "four four"
+      "three one"
+      "two one"
+      "two five";
+  }
+}
+
+@media screen and (min-width: 54em) {
+  .grid-part {
+    grid-template-areas:
+      "one one two"
+      "three three four"
+      "five five five";
+  }
+}
+
+@media screen and (min-width: 75em) {
+  .grid-part {
+    grid-template-areas:
+      "one one two five"
+      "three four four five";
+  }
+}
